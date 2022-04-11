@@ -1,8 +1,9 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 const shippingSchema = mongoose.Schema({
         order_id: {
             type: Number,
             required: true
+            // allowNull: false
         },
         quantity: {
             type: Number,
@@ -14,16 +15,21 @@ const shippingSchema = mongoose.Schema({
         },
         shipping_date: {
             type: Date,
-            required: true
+            required: true,
+            default: Date.now
         },
         shipping_status: {
             type: String,
-            required: true
+            enum: {
+                values: ['Beklemede', 'Kargoya verildi', 'Teslim edildi'],
+                message: '{VALUE} is not supported}'
+            },
+            default: 'Beklemede'
         },
         notes: {
             type: String,
             required: false
-        },
-    });
+        }
+    })
 
-module.exports = mongoose.model('Shipping', shippingSchema);
+module.exports = mongoose.model('Shipping', shippingSchema)
