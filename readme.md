@@ -24,6 +24,4 @@ npm install express-validator
 |PUT|    https://localhost:3000/shippings/id        |Edit|
 |DELETE| https://localhost:3000/shippings/id        |Destroy| 
 
-<br>
 
-# Ekran Görüntüleri
