@@ -1,6 +1,4 @@
-# Node.js ile Web Api
-
-GÜNCELLENECEK!
+# Node.js ile Web API
 
 # Kurulum
 Bu modülün kurulumu için öncelikle Node.js’in sistemde kurulu olması gerekiyor. 
